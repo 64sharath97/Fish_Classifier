@@ -1,0 +1,82 @@
+<!doctype html>
+    <html>
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>  
+    <p></p>
+
+    <div class="row justify-content-md-center mb-1">
+        <h3 class='text-primary'>Prediction</h3>
+    </div>
+
+    <div class="row justify-content-md-center">
+        <div class="thumbnail">
+            {% if prediction == 0 %}
+                <img src="{{url_for('static', filename='Bream.jpg')}}" class="img-thumbnail" height="600" width="800"/>
+                <h4 class='row justify-content-md-center'>Bream Fish</h3>
+            {% endif %}
+        </div>
+    </div>
+
+    <div class="row justify-content-md-center">
+        <div class="thumbnail">
+            {% if prediction == 1 %}
+                <image src="{{url_for('static', filename='Parkki.jpg')}}" class="img-thumbnail" height="600" width="800"/>
+                <h4 class='row justify-content-md-center'>Parkki Fish<h4>
+            {% endif %}    
+        </div>
+    </div>
+
+    <div class="row justify-content-md-center mb-4">
+        <div class="thumbnail">
+            {% if prediction == 2 %}
+                <img src="{{url_for('static', filename='Perch.jpg')}}" class="img-thumbnail" height="600" width="800"/>
+                <h4 class='row justify-content-md-center'>Perch Fish<h4>
+            {% endif %}
+        </div>
+    </div>
+
+    <div class="row justify-content-md-center">
+        <div class="thumbnail">
+            {% if prediction == 3 %}
+                <img src="{{url_for('static', filename='Pike.jpg')}}" class="img-thumbnail" height="600" width="800"/>
+                <h4 class='row justify-content-md-center'>Pike Fish<h4>
+            {% endif %}
+        </div>
+    </div>
+
+    <div class="row justify-content-md-center">
+        <div class="thumbnail">
+            {% if prediction == 4 %}
+                <img src="{{url_for('static', filename='Roach.jpg')}}" class="img-thumbnail" height="600" width="800"/>
+                <h4 class='row justify-content-md-center'>Roach Fish</h4>
+            {% endif %}
+        </div>
+    </div>
+
+    <div class="row justify-content-md-center">
+        <div class="thumbnail">
+            {% if prediction == 5 %}
+                <img src="{{url_for('static', filename='Smelt.jpg')}}" class="img-thumbnail" height="600" width="800"/>
+                <h4 class='row justify-content-md-center'>Smelt Fish</h4>
+            {% endif %}
+        </div>
+    </div>
+
+    <div class="row justify-content-md-center">
+        <div class="thumbnail">
+            {% if prediction == 6 %}
+                <img src="{{url_for('static', filename='White.jpg')}}" class="img-thumbnail" height="600" width="800"/>
+                <h4 class='row justify-content-md-center'>White Fish</h4>
+            {% endif %} 
+        </div>
+    </div>
+
+    <div class="row justify-content-md-center"> 
+        <label class="control-label col-sm-1" for="">&nbsp;</label>                
+        <div class="col-sm-2">
+            <a href="{{ url_for('home') }}" class="btn btn-primary">Predict Again</a>
+        </div>
+    </div>
+</html>

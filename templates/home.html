@@ -1,0 +1,82 @@
+<!doctype html>
+<html>
+
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>  
+<p></p>
+
+<body>
+<title>Predict Fish</title>
+
+  <!-- Starts image section -->
+  <div class="row justify-content-md-center mb-2">
+      <h2 class='text-primary'>Classify your fish!</h2>
+  </div>
+  
+  <div class="row justify-content-md-center mb-2">
+      <div class="thumbnail">
+          <img src="{{url_for('static', filename='Fish_Wallpaper.jpg')}}" class="img-thumbnail" width = '400' height = '400'/>
+      </div>
+  </div>
+  <!-- Ends image section -->
+  
+  <!-- Starts form section -->
+  <div class="row justify-content-md-center mb-2">
+    <p><strong>Enter the dimensions of the fish</strong></p>
+    <form action = "{{ url_for('predict') }}" method="POST">
+  </div>
+
+  <div class="row justify-content-md-center mb-2">
+    <label class="control-label col-sm-1" for="Length_1">Length 1</label>
+    <div class="col-sm-1">
+      <input type="text" class="form-control" id="Length_1" name="Length_1">
+    </div>
+  </div>
+  
+  <div class="row justify-content-md-center mb-2">
+    <label class="control-label col-sm-1" for="Length_2">Length 2</label>
+    <div class="col-sm-1">          
+      <input type="text" class="form-control" id="Length_2" name="Length_2">
+    </div>
+  </div>
+
+  <div class="row justify-content-md-center mb-2">
+    <label class="control-label col-sm-1" for="Length_3">Length 3</label>
+    <div class="col-sm-1">
+      <input type="text" class="form-control" id="Length_3" name="Length_3">
+    </div>
+  </div>
+  
+  <div class="row justify-content-md-center mb-2">
+    <label class="control-label col-sm-1" for="Height">Height</label>
+    <div class="col-sm-1">          
+      <input type="text" class="form-control" id="Height" name="Height">
+    </div>
+  </div>
+
+  <div class="row justify-content-md-center mb-2">
+    <label class="control-label col-sm-1" for="Width">Width</label>
+    <div class="col-sm-1">          
+      <input type="text" class="form-control" id="Width" name="Width">
+    </div>
+  </div>
+
+  <div class="row justify-content-md-center mb-2">
+    <label class="control-label col-sm-1" for="Weight">Weight</label>
+    <div class="col-sm-1">          
+      <input type="text" class="form-control" id="Weight" name="Weight">
+    </div>
+    </div>
+  
+  <div class="row justify-content-md-center mb-2"> 
+  <label class="control-label col-sm-1" for="">&nbsp;</label>                
+    <div class="col-sm-2">
+      <button type="submit" class="btn btn-primary">Predict</button>
+    </div>
+  </div>
+  </form>
+      
+  <!-- Ends form section -->   
+</body>
+</html>
