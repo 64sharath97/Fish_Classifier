@@ -6,7 +6,7 @@ import os
 
 port = int(os.environ.get('PORT', 5000))
 
-filepath = 'models\Fish_model.pkl'
+filepath = '/app/models/Fish_model.pkl'
 ml_model = joblib.load(open(filepath,'rb'))
 
 app = Flask(__name__)
